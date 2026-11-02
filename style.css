@@ -1,0 +1,248 @@
+:root {
+    --bg-color: #d4f279; 
+    --text-color: #111111;
+    --white-color: #ffffff;
+    --font-primary: 'Inter', sans-serif;
+    --max-width: 2000px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+}
+
+/* Eliminado min-width para permitir adaptabilidad */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 2px solid var(--text-color);
+}
+
+/* Diseño del logo adaptado para funcionar como enlace */
+.logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.css3-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.css3-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.css3-menu a:hover {
+    opacity: 0.5;
+}
+
+.btn-primary {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.hero {
+    margin-bottom: 4rem;
+}
+
+.hero .subtitle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+}
+
+.hero .description {
+    max-width: 400px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.main-layout {
+    display: flex;
+    gap: 4rem;
+    border-top: 2px solid var(--text-color);
+    padding-top: 4rem;
+}
+
+.content {
+    flex: 2;
+}
+
+.content h2 {
+    font-size: 4rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    border: 2px solid var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+aside {
+    flex: 1;
+    border-left: 2px solid var(--text-color);
+    padding-left: 2rem;
+}
+
+.aside-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.aside-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+    font-weight: 700;
+    display: flex;
+    gap: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: var(--text-color);
+    color: var(--white-color);
+}
+
+.social-icons a {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--bg-color);
+}
+
+.fixed-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* Media Queries para adaptabilidad (Responsive Design) */
+@media (max-width: 999px) {
+    header {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .css3-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .main-layout {
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+    }
+
+    .content h2 {
+        font-size: 2.5rem;
+    }
+
+    aside {
+        border-left: none;
+        border-top: 2px solid var(--text-color);
+        padding-left: 0;
+        padding-top: 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .social-icons a {
+        margin: 0 0.75rem;
+    }
+    
+    .fixed-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
